@@ -1,0 +1,7 @@
+/home/jontg/Kindle/server/weather-script.log {
+  rotate 4
+  weekly
+  compress
+  missingok
+  notifempty
+}
