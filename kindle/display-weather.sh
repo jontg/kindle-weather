@@ -2,12 +2,13 @@
 
 cd "$(dirname "$0")"
 
-rm weather-script-output.png
 eips -c
 eips -c
 
-if wget http://server/path/to/weather-script-output.png; then
-	eips -g weather-script-output.png
+FILE=`find /mnt/us/weather -mmin -60 -name weather-uploaded-output.png`
+
+if [[ -f "$FILE" ]]; then
+        eips -g weather-uploaded-output.png
 else
-	eips -g weather-image-error.png
+        eips -g weather-image-error.png
 fi
