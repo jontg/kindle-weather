@@ -28,7 +28,7 @@
 
 	<g transform="translate(240 480)">
 		<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#ICON_THREE"/>
-		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14"   >Wednesday:</text>
+		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14"   >DAY_THREE:</text>
 		<text style="text-anchor:middle;" font-size="20px"  x="35" y="156"   >High:</text>
 		<text style="text-anchor:end;"    font-size="58px"  x="76" y="206"   >HIGH_THREE</text>
 		<text style="text-anchor:middle;" font-size="37px"  x="94" y="191"   >°F</text>
@@ -39,7 +39,7 @@
 
 	<g transform="translate(440 480)">
 		<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#ICON_FOUR"/>
-		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14"   >Thursday:</text>
+		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14"   >DAY_FOUR:</text>
 		<text style="text-anchor:middle;" font-size="20px"  x="35" y="156"   >High:</text>
 		<text style="text-anchor:end;"    font-size="58px"  x="76" y="206"   >HIGH_FOUR</text>
 		<text style="text-anchor:middle;" font-size="37px"  x="94" y="191"   >°F</text>
