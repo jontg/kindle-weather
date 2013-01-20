@@ -1,4 +1,4 @@
-/home/jontg/Kindle/server/weather-script.log {
+/home/jontg/log/weather-script.log {
   rotate 4
   weekly
   compress
