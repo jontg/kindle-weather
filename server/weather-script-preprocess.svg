@@ -1,51 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="1200" width="824" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="1200" width="824" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<g transform="scale(3.25) translate(5 20)">
-	<use xlink:href="weather-script-icons.svg#blizzard"/>
-</g>
+<g font-family="DejaVu Sans" transform="translate(200 212)">
+	<g transform="translate(16.25 65)">
+		<use transform="scale(3.25)" xlink:href="weather-script-icons.svg#blizzard"/>
+	</g>
+	<g transform="translate(25 0)">
+		<text style="text-anchor:begin;"  font-size="35px"  x="0"         y="52.256058" >Today:</text>
+		<text style="text-anchor:middle;" font-size="35px"  x="420"       y="121.70689" >High:</text>
+		<text style="text-anchor:end;"    font-size="100px" x="501.72095" y="209.20592" >11</text>
+		<text style="text-anchor:middle;" font-size="64px"  x="523.30981" y="182.48717" >°F</text>
+		<text style="text-anchor:middle;" font-size="35px"  x="415.80057" y="275.13895" >Low:</text>
+		<text style="text-anchor:end;"    font-size="100px" x="501.23267" y="359.8533"  >10</text>
+		<text style="text-anchor:middle;" font-size="64px"  x="523.30981" y="333.13455" >°F</text>
+	</g>
 
-<g transform="scale(1.2) translate(34 400)">
-	<use xlink:href="weather-script-icons.svg#hi_shwrs"/>
-</g>
-<g transform="scale(1.2) translate(200 400)">
-	<use xlink:href="weather-script-icons.svg#wind"/>
-</g>
-<g transform="scale(1.2) translate(366 400)">
-	<use xlink:href="weather-script-icons.svg#scttsra"/>
-</g>
+	<g transform="translate(40 480)">
+		<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#hi_shwrs"/>
+		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14  " >Tomorrow:</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="35" y="156  " >High:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="206  " >21</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="191  " >°F</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="32" y="244.5" >Low:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="293.5" >20</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="278  " >°F</text>
+	</g>
 
-<g font-family="DejaVu Sans">
-	<text style="text-anchor:begin;"  font-size="35px"  x="25"        y="52.256058" >Today:</text>
-	<text style="text-anchor:middle;" font-size="35px"  x="445"       y="121.70689" >High:</text>
-	<text style="text-anchor:end;"    font-size="100px" x="526.72095" y="209.20592" >11</text>
-	<text style="text-anchor:middle;" font-size="64px"  x="548.30981" y="182.48717" >°F</text>
-	<text style="text-anchor:middle;" font-size="35px"  x="440.80057" y="275.13895" >Low:</text>
-	<text style="text-anchor:end;"    font-size="100px" x="526.23267" y="359.8533"  >10</text>
-	<text style="text-anchor:middle;" font-size="64px"  x="548.30981" y="333.13455" >°F</text>
+	<g transform="translate(240 480)">
+		<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#wind"/>
+		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14  " >Wednesday:</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="35" y="156  " >High:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="206  " >31</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="191  " >°F</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="32" y="244.5" >Low:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="293.5" >30</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="278  " >°F</text>
+	</g>
 
-	<text style="text-anchor:middle;" font-size="32px"  x="102.92969" y="465.16922" >Tomorrow:</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="74.958336" y="635.68347" >High:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="116.05887" y="686.3255"  >21</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="134.01662" y="670.86145" >°F</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="71.906197" y="724.48578" >Low:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="116.00232" y="773.51617" >20</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="134.01663" y="758.05206" >°F</text>
-
-	<text style="text-anchor:middle;" font-size="32px"  x="300.3125"  y="466.15359" >Wednesday:</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="273.95834" y="635.68347" >High:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="314.15454" y="686.3255"  >31</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="333.01663" y="670.86145" >°F</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="270.90619" y="724.48578" >Low:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="314.08383" y="773.51617" >30</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="333.0166"  y="758.05206" >°F</text>
-
-	<text style="text-anchor:middle;" font-size="32px"  x="499.82813" y="466.15359" >Thursday:</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="472.95834" y="635.68347" >High:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="513.30994" y="686.3255"  >41</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="532.0166"  y="670.86145" >°F</text>
-	<text style="text-anchor:middle;" font-size="20px"  x="469.90619" y="724.48578" >Low:</text>
-	<text style="text-anchor:end;"    font-size="58px"  x="513.73383" y="773.51617" >40</text>
-	<text style="text-anchor:middle;" font-size="37px"  x="532.0166"  y="758.05206" >°F</text>
+	<g transform="translate(440 480)">
+		<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#scttsra"/>
+		<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14  " >Thursday:</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="35" y="156  " >High:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="206  " >41</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="191  " >°F</text>
+		<text style="text-anchor:middle;" font-size="20px"  x="32" y="244.5" >Low:</text>
+		<text style="text-anchor:end;"    font-size="58px"  x="76" y="293.5" >40</text>
+		<text style="text-anchor:middle;" font-size="37px"  x="94" y="278  " >°F</text>
+	</g>
 </g>
 
 <path d="m199,447.35,0,321.5,3,0,0-321.5-3,0z"/>
