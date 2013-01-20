@@ -47,9 +47,12 @@
 		<text style="text-anchor:end;"    font-size="58px"  x="76" y="293.5" >40</text>
 		<text style="text-anchor:middle;" font-size="37px"  x="94" y="278  " >°F</text>
 	</g>
+  <g transform="translate(200 450)">
+	  <path d="m0,321,3,0,0,-321,-3,0z"/>
+  </g>
+  <g transform="translate(400 450)">
+	  <path d="m0,321,3,0,0,-321,-3,0z"/>
+  </g>
 </g>
-
-<path d="m199,447.35,0,321.5,3,0,0-321.5-3,0z"/>
-<path d="m398,447.35,0,321.5,3,0,0-321.5-3,0z"/>
 
 </svg>
