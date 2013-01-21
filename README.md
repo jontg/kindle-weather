@@ -5,6 +5,7 @@ A collection of moving parts necessary to display stuff on my jailbroken Kindle 
 
 Root your kindle; I suggest [TurnKey Linux][]'s walkthrough.
 
+
 ## Credits
 Based in large part on the original work by [Matthew Petrov][], I wanted to make stuff appear on my kindle.
 
