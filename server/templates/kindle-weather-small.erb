@@ -1,0 +1,10 @@
+<g transform="translate(<%= @offset %> 480)">
+	<use transform="scale(1.2)" xlink:href="weather-script-icons.svg#<%= @icon %>"/>
+	<text style="text-anchor:middle;" font-size="32px"  x="63" y="-14"   ><%= @day %>:</text>
+	<text style="text-anchor:middle;" font-size="20px"  x="35" y="156"   >High:</text>
+	<text style="text-anchor:end;"    font-size="58px"  x="76" y="206"   ><%= @high %></text>
+	<text style="text-anchor:middle;" font-size="37px"  x="94" y="191"   >°F</text>
+	<text style="text-anchor:middle;" font-size="20px"  x="32" y="244.5" >Low:</text>
+	<text style="text-anchor:end;"    font-size="58px"  x="76" y="293.5" ><%= @low %></text>
+	<text style="text-anchor:middle;" font-size="37px"  x="94" y="278"   >°F</text>
+</g>
