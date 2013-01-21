@@ -2,10 +2,8 @@
 	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <g font-family="DejaVu Sans" transform="translate(100 200)">
-	<g transform="translate(16.25 65)">
-		<use transform="scale(3.25)" xlink:href="weather-script-icons.svg#ICON_ONE"/>
-	</g>
 	<g transform="translate(25 0)">
+    <use transform="translate(-8.75 65) scale(3.25)" xlink:href="weather-script-icons.svg#<%= @day[:icon] %>"/>
 		<text style="text-anchor:begin;"  font-size="35px"  x="0"         y="52.256058" >Today:</text>
 		<text style="text-anchor:middle;" font-size="35px"  x="420"       y="121.70689" >High:</text>
 		<text style="text-anchor:end;"    font-size="100px" x="501.72095" y="209.20592" >HIGH_ONE</text>
