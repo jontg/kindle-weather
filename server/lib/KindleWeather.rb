@@ -1,6 +1,10 @@
 require 'erb'
 require 'tempfile'
 require 'yaml'
+require 'net/http'
+require 'uri'
+require 'xmlsimple'
+require 'pp'
 
 class KindleWeather
 	# Constants
@@ -20,7 +24,15 @@ class KindleWeather
 	end
 
 	def process
-		print @latitude, "\t", @longitude
-		print WEATHER_URL.result(binding)
+		puts print @latitude, "\t", @longitude
+
+		weather_uri = URI.parse(WEATHER_URL.result(binding).lstrip)
+		weather_info = XmlSimple.xml_in(Net::HTTP.get(weather_uri), {'ForceArray' => false, 'KeyAttr' => ['type']})
+		day_of_week = weather_info["data"]["time-layout"][0]["start-valid-time"].map{|s| Date::DAYNAMES[Date.strptime(s, "%Y-%m-%d").wday]}
+		icons = weather_info["data"]["parameters"]["conditions-icon"]["icon-link"].map{|elem| URI.parse(elem).path.split('/')[-1][/[a-zA-Z_]*/]}
+		highs = weather_info["data"]["parameters"]["temperature"]["maximum"]["value"]
+		lows = weather_info["data"]["parameters"]["temperature"]["minimum"]["value"]
+		pp day_of_week.zip(icons,highs, lows)
+
 	end
 end # class
