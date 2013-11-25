@@ -5,9 +5,6 @@ require 'net/http'
 require 'uri'
 require 'xmlsimple'
 
-# Temporary requirements
-require 'pp'
-
 class KindleWeather
 	# Constants
 	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory	
@@ -27,18 +24,26 @@ class KindleWeather
 	end
 
 	def fetch_and_parse_5day
-		puts print @latitude, "\t", @longitude
 		weather_uri = URI.parse(WEATHER_URL.result(binding).lstrip)
 		weather_info = XmlSimple.xml_in(Net::HTTP.get(weather_uri), {'ForceArray' => false, 'KeyAttr' => ['type']})
 		day_of_week = weather_info["data"]["time-layout"][0]["start-valid-time"].map{|s| Date::DAYNAMES[Date.strptime(s, "%Y-%m-%d").wday]}
 		icons = weather_info["data"]["parameters"]["conditions-icon"]["icon-link"].map{|elem| URI.parse(elem).path.split('/')[-1][/[a-zA-Z_]*/]}
 		highs = weather_info["data"]["parameters"]["temperature"]["maximum"]["value"]
 		lows = weather_info["data"]["parameters"]["temperature"]["minimum"]["value"]
-		day_of_week.zip(icons,highs, lows)
+		day_of_week.zip(icons,highs,lows)
 	end
 
 	def process
 		weather_5day = fetch_and_parse_5day()
-		pp weather_5day
+		{
+			:today => {
+				:icon => weather_5day[0][1], :high => weather_5day[0][2], :low => weather_5day[0][3]
+			},
+			:next_three_days => [
+				{ :offset => "40",  :day => "Tomorrow",         :icon => weather_5day[0][1], :high => weather_5day[0][2], :low => weather_5day[0][3] },
+				{ :offset => "240", :day => weather_5day[1][0], :icon => weather_5day[1][1], :high => weather_5day[1][2], :low => weather_5day[1][3] },
+				{ :offset => "440", :day => weather_5day[2][0], :icon => weather_5day[2][1], :high => weather_5day[2][2], :low => weather_5day[2][3] }
+			]
+		}
 	end
 end # class

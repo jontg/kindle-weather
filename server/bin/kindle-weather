@@ -7,7 +7,7 @@ require 'time'
 
 # Lib
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-require 'KindleWeather'
+require 'Renderer'
 
 #=------------------------------------------------------------------------------------------------=#
 
@@ -39,8 +39,9 @@ class KindleWeatherRunner
 	private #=--------------------------------------------------------------------------------------=#
 
 	def run
-		kindleweather = KindleWeather.new
-		kindleweather.process
+		renderer = Renderer.new
+
+		renderer.process
 	end
 
 	protected #=------------------------------------------------------------------------------------=#
