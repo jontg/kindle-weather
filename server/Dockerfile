@@ -1,6 +1,6 @@
 FROM ruby:2
 
-RUN apt-get update -y && apt-get install -y librsvg2-bin
+RUN apt-get update -y && apt-get install -y librsvg2-bin pngcrush
 
 ENV CONFIG_ROOT "/source/config"
 VOLUME [ "/config", "/output" ]
