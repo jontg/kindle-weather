@@ -8,8 +8,8 @@ require 'base64'
 
 class ActiveBrew
 	# Constants
-	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory	
-	CONFIG_FILE = "#{ROOT}/config/ActiveBrew.conf"
+	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory
+	CONFIG_FILE = "#{ENV['CONFIG_ROOT'] || "#{ROOT}/config"}/ActiveBrew.conf"
 
 	TEMPERATURE_URL = ERB.new <<-EOU
 		https://api.xively.com/v2/feeds/<%= @feed %>/datastreams/<%= @datastream %>.png?w=800&h=175&duration=<%= @duration %>&interval=<%= @interval %>

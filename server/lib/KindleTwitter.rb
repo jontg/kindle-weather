@@ -5,7 +5,7 @@ require 'twitter'
 class KindleTwitter
 	# Constants
 	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory
-	CONFIG_FILE = "#{ROOT}/config/Twitter.conf"
+	CONFIG_FILE = "#{ENV['CONFIG_ROOT'] || "#{ROOT}/config"}/Twitter.conf"
 
 	attr_accessor :credentials
 

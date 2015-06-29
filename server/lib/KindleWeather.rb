@@ -8,7 +8,8 @@ require 'xmlsimple'
 class KindleWeather
 	# Constants
 	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory
-	CONFIG_FILE = "#{ROOT}/config/KindleWeather.conf"
+	CONFIG_FILE = "#{ENV['CONFIG_ROOT'] || "#{ROOT}/config"}/Weather.conf"
+
 	WEATHER_PANEL_SMALL = ERB.new File.new("#{ROOT}/templates/kindle-weather-small.erb").read
 	WEATHER_PANEL_BANNER = ERB.new File.new("#{ROOT}/templates/kindle-weather-banner.erb").read
 	WEATHER_URL = ERB.new <<-EOU
