@@ -29,6 +29,9 @@
   	<path transform="translate(600 475)" d="m0,321,3,0,0,-321,-3,0z"/>
 
   </g>
+	<g transform="translate(412 820)">
+		<text style="text-anchor: middle;" font-size="25px" font-weight="bold">@<%= twitter[:name] %></text>
+	</g>
 	<g transform="translate(60 850)">
 		<% twitter[:tweets].each_with_index do |tweet,twit_index| %>
 			<% tweet.chars.each_slice(tweet.index(' ', 70) || 70).map(&:join).each_with_index do |line,index| %>

@@ -12,6 +12,7 @@ class KindleTwitter
 	def initialize
 		settings = YAML::load_file(CONFIG_FILE)
 		@credentials = settings['credentials']
+		@feed = settings["feed"]
 	end
 
 	def process
@@ -24,7 +25,8 @@ class KindleTwitter
 
 		{
 			:twitter => {
-				:tweets => client.user_timeline('caltrain_news').take(5).map{|t| t.full_text}
+				:name => @feed,
+				:tweets => client.user_timeline(@feed).take(5).map{|t| t.full_text}
 			}
 		}
 	end
