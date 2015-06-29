@@ -24,14 +24,23 @@
   		<text style="text-anchor:middle;" font-size="37px"  x="94" y="278"   >°F</text>
   	</g>
   <% end %>
-  	<path transform="translate(200 450)" d="m0,321,3,0,0,-321,-3,0z"/>
-  	<path transform="translate(400 450)" d="m0,321,3,0,0,-321,-3,0z"/>
-  	<path transform="translate(600 450)" d="m0,321,3,0,0,-321,-3,0z"/>
-  
+  	<path transform="translate(200 475)" d="m0,321,3,0,0,-321,-3,0z"/>
+  	<path transform="translate(400 475)" d="m0,321,3,0,0,-321,-3,0z"/>
+  	<path transform="translate(600 475)" d="m0,321,3,0,0,-321,-3,0z"/>
+
   </g>
-  <g transform="translate(12 850)">
-    <image width="800px" height="150px" xlink:href="<%= temp_b64 %>" />
-    <image y="175" width="800px" height="150px" xlink:href="<%= ice_b64 %>" />
-  </g>
+	<g transform="translate(60 850)">
+		<% twitter[:tweets].each_with_index do |tweet,twit_index| %>
+			<% tweet.chars.each_slice(tweet.index(' ', 70) || 70).map(&:join).each_with_index do |line,index| %>
+				<text style="text-anchor:left;" font-size="20px" x="<%= (index + 1) * 20 %>" y="<%= twit_index * 50 + index * 25 %>">
+					<%= line %>
+				</text>
+			<% end %>
+		<% end %>
+	</g>
+  <!-- <g transform="translate(12 850)"> -->
+    <!-- <image width="800px" height="150px" xlink:href="<%= temp_b64 %>" /> -->
+    <!-- <image y="175" width="800px" height="150px" xlink:href="<%= ice_b64 %>" /> -->
+  <!-- </g> -->
 
 </svg>
