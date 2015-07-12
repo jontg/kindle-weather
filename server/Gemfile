@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'xml-simple', "~> 1.1.2"
+gem 'xml-simple', '~> 1.1.2'
 gem 'twitter'
+
+gem 'actionview'

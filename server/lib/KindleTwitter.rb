@@ -2,6 +2,10 @@ require 'tempfile'
 require 'yaml'
 require 'twitter'
 
+require 'action_view'
+require 'action_view/helpers'
+include ActionView::Helpers::DateHelper
+
 class KindleTwitter
 	# Constants
 	ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) # Get the root directory
@@ -26,7 +30,9 @@ class KindleTwitter
 		{
 			:twitter => {
 				:name => @feed,
-				:tweets => client.user_timeline(@feed).take(5).map{|t| t.full_text}
+				:tweets => client.user_timeline(@feed).take(5).map{|t|
+					time_ago_in_words(t.created_at) + ' ago: ' + t.full_text
+				}
 			}
 		}
 	end

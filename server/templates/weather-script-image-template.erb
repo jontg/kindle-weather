@@ -34,8 +34,8 @@
 	</g>
 	<g transform="translate(60 850)">
 		<% twitter[:tweets].each_with_index do |tweet,twit_index| %>
-			<% tweet.chars.each_slice(tweet.index(' ', 70) || 70).map(&:join).each_with_index do |line,index| %>
-				<text style="text-anchor:left;" font-size="20px" x="<%= (index + 1) * 20 %>" y="<%= twit_index * 50 + index * 25 %>">
+			<% tweet.chars.each_slice(tweet.index(' ', 50) || 50).map(&:join).each_with_index do |line,index| %>
+				<text style="text-anchor:left;" font-size="25px" x="<%= (index + 1) * 30 %>" y="<%= twit_index * 65 + index * 30 %>">
 					<%= line %>
 				</text>
 			<% end %>

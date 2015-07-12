@@ -11,7 +11,7 @@ WORKDIR /tmp
 ADD Gemfile /tmp/Gemfile
 ADD Gemfile.lock /tmp/Gemfile.lock
 
-RUN bundle install
+RUN bundle install --without test development
 
 ADD . /source
 WORKDIR /source
